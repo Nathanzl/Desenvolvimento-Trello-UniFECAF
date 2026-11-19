@@ -1,0 +1,31 @@
+print("Olá! Seja bem-vindo a calculadora simples.")
+print("Selecione abaixo a operação desejada:")
+print("1 - Soma")
+print("2 - Subtração")
+
+def UsuarioEscolheOperacao():
+    operacao = int(input("Digite o número desejado: "))
+
+    if operacao == 1:
+        print("Você escolheu a operação de somar números.")
+    elif operacao == 2:
+        print("Você escolheu a operação de subtrair números.")
+    else:
+        print("Opção inválida. Por favor, selecione uma operação válida.")
+        return UsuarioEscolheOperacao()
+
+    if operacao == 1:
+        num1 = float(input("Digite o primeiro número: "))
+        num2 = float(input("Digite o segundo número: "))
+        resultado = num1 + num2
+        print(f"O resultado da soma é: {resultado}")
+    elif operacao == 2:
+        num1 = float(input("Digite o primeiro número: "))
+        num2 = float(input("Digite o segundo número: "))
+        resultado = num1 - num2
+        print(f"O resultado da subtração é: {resultado}")
+    else:
+        print("Operação inválida. Por favor, tente novamente.")
+        return UsuarioEscolheOperacao()
+
+UsuarioEscolheOperacao()
